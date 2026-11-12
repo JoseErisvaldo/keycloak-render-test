@@ -1,6 +1,6 @@
 # Keycloak para teste no Render
 
-Este projeto sobe o Keycloak usando a imagem oficial Docker, em modo de desenvolvimento, para testes rápidos.
+Este projeto sobe o Keycloak usando a imagem oficial Docker, em modo de desenvolvimento, para testes rápidos. O container limita o heap da JVM para caber melhor no plano gratuito do Render; ainda assim, a inicialização pode ser lenta e o limite de memória do plano pode ser excedido.
 
 ## Publicar no Render
 
