@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: keycloak-test
+    runtime: docker
+    plan: free
+    healthCheckPath: /realms/master
+    envVars:
+      - key: KC_BOOTSTRAP_ADMIN_USERNAME
+        value: admin
+      - key: KC_BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
