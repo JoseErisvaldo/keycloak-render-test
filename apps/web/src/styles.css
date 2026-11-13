@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e5e7eb;
+  background: #0b1120;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.auth-page, .loading { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.auth-card { width: min(100%, 420px); padding: 42px; border: 1px solid #263247; border-radius: 20px; background: #111a2b; box-shadow: 0 24px 80px #0005; }
+.eyebrow { color: #63d6b1; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+h1, h2 { font-family: Manrope, sans-serif; letter-spacing: -.04em; }
+.auth-card h1 { margin: 16px 0 8px; font-size: 30px; }
+.auth-card p, .welcome p, .panel-heading p { color: #93a2b8; line-height: 1.65; }
+.primary, .example-form button { border: 0; border-radius: 9px; color: #071411; background: #63d6b1; font-weight: 700; padding: 12px 17px; }
+.primary:hover, .example-form button:hover { background: #85e7c7; }
+.full-width { width: 100%; margin-top: 20px; }
+.dashboard { width: min(100% - 48px, 960px); margin: 0 auto; }
+.topbar { height: 76px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #202b3e; }
+.brand { color: #e5e7eb; font: 800 24px Manrope, sans-serif; text-decoration: none; }
+.brand span { color: #63d6b1; }
+.user-menu { display: flex; align-items: center; gap: 16px; color: #aab6c7; font-size: 14px; }
+.secondary { padding: 8px 13px; border: 1px solid #344258; border-radius: 8px; color: #d3dae5; background: transparent; }
+.welcome { padding: 58px 0 36px; }
+.welcome h1 { margin: 10px 0 4px; font-size: clamp(32px, 5vw, 46px); }
+.welcome p { margin: 0; }
+.panel { padding: 28px; border: 1px solid #263247; border-radius: 16px; background: #111a2b; }
+.panel-heading h2 { margin: 0 0 6px; font-size: 20px; }
+.panel-heading p { margin: 0 0 24px; font-size: 14px; }
+.example-form label { display: block; margin-bottom: 9px; font-size: 13px; font-weight: 600; }
+.form-row { display: flex; gap: 10px; }
+.form-row input { flex: 1; min-width: 0; padding: 11px 13px; border: 1px solid #344258; border-radius: 9px; color: #e5e7eb; background: #0b1120; outline: none; }
+.form-row input:focus { border-color: #63d6b1; }
+.example-list { margin: 20px 0 0; padding: 0; list-style: none; }
+.example-list li { display: flex; justify-content: space-between; gap: 16px; padding: 15px 2px; border-top: 1px solid #263247; }
+.example-list time, .muted { color: #8492a8; font-size: 13px; }
+.error { color: #fca5a5; font-size: 13px; }
+.loading { color: #93a2b8; }
+@media (max-width: 560px) {
+  .auth-card { padding: 30px 24px; }
+  .dashboard { width: min(100% - 32px, 960px); }
+  .panel { padding: 20px 16px; }
+  .user-menu { gap: 8px; font-size: 12px; }
+  .form-row { flex-direction: column; }
+}

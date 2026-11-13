@@ -1,0 +1,18 @@
+{
+  "name": "keycloak-fullstack",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c blue,green \"npm:dev --workspace=@keycloak-app/api\" \"npm:dev --workspace=@keycloak-app/web\"",
+    "build": "npm run build --workspace=@keycloak-app/api && npm run build --workspace=@keycloak-app/web",
+    "typecheck": "npm run typecheck --workspace=@keycloak-app/api && npm run typecheck --workspace=@keycloak-app/web",
+    "db:generate": "npm run db:generate --workspace=@keycloak-app/api",
+    "db:migrate": "npm run db:migrate --workspace=@keycloak-app/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,189 @@
+:root {
+  --site-bg: #0b1120;
+  --site-surface: #111a2b;
+  --site-border: #263247;
+  --site-border-strong: #344258;
+  --site-text: #e5e7eb;
+  --site-muted: #93a2b8;
+  --site-accent: #63d6b1;
+  --site-accent-hover: #85e7c7;
+  --site-danger: #fca5a5;
+}
+
+html,
+body,
+body.login-pf {
+  min-height: 100%;
+  background: var(--site-bg) !important;
+}
+
+body.login-pf {
+  color: var(--site-text);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.login-pf body {
+  background:
+    radial-gradient(ellipse at 50% 0, rgb(99 214 177 / 9%), transparent 48%),
+    var(--site-bg);
+}
+
+.login-pf-page {
+  padding: 48px 16px;
+}
+
+#kc-header {
+  margin-bottom: 20px;
+}
+
+#kc-header-wrapper {
+  color: var(--site-text);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+#kc-header-wrapper::before {
+  content: "KC";
+  color: var(--site-text);
+  font-size: 28px;
+}
+
+#kc-header-wrapper::after {
+  content: ".";
+  color: var(--site-accent);
+  font-size: 28px;
+}
+
+.card-pf,
+#kc-content,
+#kc-content-wrapper {
+  color: var(--site-text);
+}
+
+.card-pf {
+  overflow: hidden;
+  border: 1px solid var(--site-border);
+  border-radius: 18px;
+  background: var(--site-surface);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 32%);
+}
+
+.login-pf-header {
+  padding: 28px 32px 0;
+}
+
+.login-pf-header h1,
+#kc-page-title {
+  color: var(--site-text);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+#kc-content {
+  padding: 12px 32px 30px;
+}
+
+.pf-v5-c-form__label,
+.control-label,
+label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pf-v5-c-form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+  min-height: 44px;
+  border: 1px solid var(--site-border-strong) !important;
+  border-radius: 9px !important;
+  color: var(--site-text) !important;
+  background: var(--site-bg) !important;
+  box-shadow: none !important;
+}
+
+.pf-v5-c-form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--site-accent) !important;
+  outline: 2px solid rgb(99 214 177 / 18%);
+}
+
+.pf-v5-c-button.pf-m-primary,
+input[type="submit"],
+button[type="submit"],
+#kc-login {
+  min-height: 44px;
+  border: 0 !important;
+  border-radius: 9px !important;
+  color: #071411 !important;
+  background: var(--site-accent) !important;
+  font-weight: 700;
+  box-shadow: none !important;
+}
+
+.pf-v5-c-button.pf-m-primary:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+#kc-login:hover {
+  background: var(--site-accent-hover) !important;
+}
+
+a,
+.login-pf-page .login-pf-settings a {
+  color: var(--site-accent);
+}
+
+a:hover,
+.login-pf-page .login-pf-settings a:hover {
+  color: var(--site-accent-hover);
+}
+
+.instruction,
+.subtitle,
+#kc-info-wrapper,
+.login-pf-signup {
+  color: var(--site-muted);
+}
+
+.alert,
+.pf-v5-c-alert {
+  border-radius: 9px;
+}
+
+.alert-error,
+.pf-v5-c-alert.pf-m-danger {
+  color: var(--site-danger);
+}
+
+.checkbox label,
+.pf-v5-c-check__label {
+  color: var(--site-muted);
+}
+
+@media (max-width: 560px) {
+  .login-pf-page {
+    padding: 24px 12px;
+  }
+
+  .card-pf {
+    border-radius: 14px;
+  }
+
+  .login-pf-header {
+    padding: 24px 22px 0;
+  }
+
+  #kc-content {
+    padding: 8px 22px 24px;
+  }
+}

@@ -1,5 +1,7 @@
 FROM quay.io/keycloak/keycloak:26.4.5
 
+COPY themes/site /opt/keycloak/themes/site
+
 ENV KC_HTTP_ENABLED=true
 ENV KC_HTTP_HOST=0.0.0.0
 ENV KC_HTTP_PORT=10000
